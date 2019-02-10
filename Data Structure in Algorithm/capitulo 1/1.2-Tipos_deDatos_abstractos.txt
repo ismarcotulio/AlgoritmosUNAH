@@ -1,0 +1,24 @@
+Acontinuacion se expone el rol de los tipos de datos abstractos en el proceso general para desarrollar un programa.
+
+Para comenzar se compara un tipo de dato abstracto con la mas familiar nocion de un procedimiento.
+
+-Procedimientos:
+Herramientas esenciales de la programacion, generaliza la nocion de un operador, en lugar de comenzar limitado por los operadores construidos en el lenguage de programacion. Usando procedimientos un programador es libre de definir sus propio operadores y aplicarlos en operaciones no basicas.
+
+Una de las ventajas de los procedimientos es que pueden ser usados para encapsular partes de un algoritmo, podria decirse que su concepto es similar a lo que hoy llamamos funciones o metodos.
+
+
+
+-Datos de tipo abstracto:
+Podemos pensar en un tipo de dato abstracto como un modelo matematico con una coleccion de operaciones definidas en ese modelo.
+en un TDA las operaciones pueden tomar como operandos no solo instancias de el TDA, siendo definidas por otros tipos de operandos. El resultado de una operacion puede ser otra instancia de TDA.
+
+al igual que los procdimientos los TDA pueden servir para generalizacion y encapsulacion.
+Se debe poner enfasis en que no hay limite en el numero de oeraciones que pueden ser aplicadas a instancias del modelo matematico dado. cada set de operacions define a un TDA distinto.
+
+Una implementacion de un TDA es una traduccion, en declaracion de un lenguage de programacion, de la declaracion que define una variable para ser un TDA, mas un procedimiento en ese lenguage por cada operacion del TDA.
+
+Arrays y listas son 2 importantes facilitadores de estructuras de datos. Apesar de que se basan en el mismo modelo, tienen operadores y propiedades distintas.
+
+
+

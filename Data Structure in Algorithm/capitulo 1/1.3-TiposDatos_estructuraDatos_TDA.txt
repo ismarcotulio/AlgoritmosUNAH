@@ -1,0 +1,12 @@
+Tipo de datos:
+Es el conjunto de valores que una variable puede tomar.
+
+TDA:
+Es un modelo matematico, que tiene cierto orden y operaciones definidas. Debemos definir algoritmos en terminos de TDAs, pero para implementar un algoritmo en un dado lenguaje de programacion , debemos hallar una forma de representar las TDAs en terminos de, tipos de datos y operadores soportados por el mismo lenguage de programacion.
+
+Para representar un modelo matematico sobre un TDA, se usan Estructuras de datos.
+
+Estructuras de datos:
+Son colecciones de variables, posiblemente incluyen diferentes tipos de datos conectados en varios caminos.
+
+Celula:

@@ -1,0 +1,30 @@
+media batalla es entender cual es el problema a resolver.
+
+
+Utilizando el razonamiento, la mayoria de problemas no son simples de solventar segun sus especificaciones. Dependiendo del problema podria ser imposible formular una solucion en terminos de desasrrollo computacional o programacion. Aveces la unica forma de solventar un problema es por medio de la experimentacion, utilizando parametros validos y logicos.
+
+existen casos en que un problema puede ser solventado con mayor facilidad utilizando como base un modelo ya existente, adecuandolo a nuestro proyecto, tambien podemos optar por comparar soluciones del modelo incluso si no es sobre nuestro problema en especifico, es importante investigar el modelo y utilizar sus propiedades para construir una optima solucion.
+
+por ejemplo...
+
+modelo matematico:
+ Casi cualquier rama matematica es de ayuda para solventar muchos problemas, sobre todo si son de naturaleza numericos, como por ejemplo, encontrar corriente en circuitos electricos.
+ modelo gramatical
+ problemas de naturaleza gramatical como, simbolos y procesamiento de texto pueden ser solventados por medio de la manipulacion de caracteres y palabras. 
+
+una vez que tengamos un adecuado modelo matematico para solventar nuestro problema, nuestro objetivo inicial es encontrar una solucion en forma de algoritmo.
+
+cada instruccion de un algoritmo debe tener un claro significadoy debe ser ejecutado en una cantidad finita de esfuerzo.
+
+Los siguientes ejemplos ilustran los pasos que debemos tomar en cuenta para desarrollar programas computacionales:
+
+1-Un modelo matematico puede ser utilizado para diseñar un semaforo. Para construir un patronde luces, debemos crear un programa que tome como entrada un set de turnos permitidos en una intersecccion y dividir los sets en pequeños grupos, luego asociar una fase del semaforo con cada grupo en la division. Podemos modelar este problema con una estructura matematica llamada grafico, un grafico consiste en sets de puntos llamados vertices, y lineas conectado los puntos llamados bordes. Para el problema de interseccion de trafico podemos dibujar un grafico donde las vertices representan los turnos y los bordes representen los pares de vertices que no pueden ser activadas simultaneamente por la interseccion.
+
+uno de los 3 enfoques para encontrar solucion es que en graficos pequeños se puede optar por encontrar una optima solucion, intentando todas las posibilidades. Pero este enfoque es realmente largo y cansado en graficos grandes.
+Un segundo enfoque podria ser mirar informacion adicional acerca del problema, Podria resultar que el grafico tiene propiedades especiales que hacen innecesario, tratar con todas las posibilidades para encontrar la optima solucion.
+El tercer enfoque consiste en cambiar un poco el problema y pensar en buenas pero necesesariamente no optimas soluciones.
+
+-segun este libro, el proceso de programacion de ser partir de los siguientes pasos:
+1-modelar usando un apropiado modelo matematico, como una grafica.
+2-Escribir el algoritmo en un pseudo-lenguage.
+3-Escoger una implementacion por cada tipo de dato abstracto y escribir los procedimientos de las operaciones en cada tipo.

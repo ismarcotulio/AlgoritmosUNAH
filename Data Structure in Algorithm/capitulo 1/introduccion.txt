@@ -1,0 +1,9 @@
+Diseño y analisis de algoritmos:
+Hay muchos pasos involucrados en la escritura de un programa de computadora que resuelve un problema dado.
+
+Entre estos pasos se pueden mencionar:
+-formulacion y especificacion de problemas, para diseñar sus respectivas soluciones y finalmente implementarlas.
+-prueba t documentacion del programa.
+-evaluacion de soluciones.
+
+
