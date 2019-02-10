@@ -10,3 +10,25 @@ Estructuras de datos:
 Son colecciones de variables, posiblemente incluyen diferentes tipos de datos conectados en varios caminos.
 
 Celula:
+ES el bloque de contruccion basico de una estructura de datos. Podemos pensar en una celula como una caja que es capaz de mantener un valor dibujado por tipos de datos basicos y compuestos.
+
+Arreglos:
+Un array por ejemplo es una sequencia de culalas de un tipo dado. Podemos pensar en un array como mapeo de un index establecido (como enteros 1,2,....n) en tipo de celulas.
+
+Estructura de Grabacion:
+Otro mecanismo comun para agrupar celulas en un lenguage de programacion es la estructura de grabacion. Una grabacion es una celula que fue hecha de una colleccion de celulas, llamadas campos. Las grabaciones son usualmente agrupadas en arreglos.
+
+Archivos:
+Un tercer metodo de agrupacion encontrado en algunos lenguages de programacion es el file o archivo. El archivo como los arreglos de 1 dimension (vectores) son una sequencia de valores de un tipo particular. Pero un archivo no tiene index, los elementos pueden ser accesados unicamentepor orden de aparicion en el archivo. 
+
+Tanto los arreglos como las grabaciones son estructuras de acceso aleatorio. El unico beneficio que tiene un archivo en comparacion a un arreglo, es que, el numero de elementos en un archivo puede ser variado e ilimitado.
+
+Punteros y cursores:
+En adicion a las caracteristicas de agrupacion por celulas, podemos relacionarlas entre ellas utilizando punteros y cursores.
+
+Puntero:
+Un puntero es una celula cuyo valor indica otra celula.. Por ejemplo cuando dibujamos una estructura de datos, indicamos el hecho de que la celula A es un puntero de la celula B como dibujando una flecha de A hacia B.
+
+Cursor:
+Un cursor es una celula de valor entero, usada como el apuntador de un array. Como un metodo de coexion, el cursor es esencialmente es lo mismo que un puntero, pero el cursor puede ser usado en otros lenguages de programacion
+in
