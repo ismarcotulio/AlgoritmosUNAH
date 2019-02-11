@@ -1,0 +1,45 @@
+Hay 2 posibles objetivos a la hora de escoger un algoritmo:
+
+1-Queremos que el codigo de nuestro algoritmo sea facil de entender y desarrollar.
+
+2-queremos que nuestro algoritmo utilice los recursos de una computadora de forma eficiente.
+
+cuando escribimos un programa que va a ser usado una o pocas veces el objetivo 1 es el mas importante. El tiempo que gasta un programador en el desarrollo de codigo debe ser equivalente a las veces que sera ejecutado el programa.es decir el costo de optimizacion es el costo de escritura. En estos casos es mejor ser sabio antes de implementar un algoritmo, para determinar los beneficios de desarrollar un programa complicado. Un programador debe ser conciente de cuando aplicar las siguientes tecnicas, sin que sea una molestia.
+
+Midiendo el tiempo de ejecucion de un programa:
+
+El tiempo de ejecucion de un programa depende de factores como:
+
+1-Las entradas del programa.
+2-La calidad de codigo generada por la computadora para crear el objeto programa.
+3-La naturaleza y velocidad de las instrucciones usadas en la maquina para ejecutar el programa.
+4-El tiempo de complejidad de el algoritmo sobre el programa.
+
+El hecho de que el tiempo de ejecucion dependa de las entradas, nos dice que el tiempo de ejecucion de un programa debe ser definido como una funcion de la entrada. Aveces el tiempo de ejecucion no depende solamente del tamaño de la entrada.
+
+T(n)= tiempo de ejecucion, en muchos programas T(n) puede ser igual a cn*cn, donde c es una constante: Las unidades de T(n) no son especificadas, pero podemos pensar que T(n) es el comienzo de instrucciones ejecutadas en una computadora.
+
+En muchos programas, el tiempo de ejecucion es una funcion de la entrada particular y no un simple tamaño de la entrada.
+
+Como antes se menciono, el tiempo de ejecucion tambien depende del compilador,esto implica que no podemos expresar el tiempo de ejecucion T(n) en unidades de tiempo estandar como segundos.
+
+Big-Oh y notacion Big-Omega:
+la notacion big oh es el metodo que utilizamos para medir la tasa de crecimiento de una funcion. 
+La notacion big omega se refiere a que existe una constante positiva c en donde T(n)>=cg(n) infinitamente.
+
+La tirania de la tasa de crecimiento:
+Debemos asumir que un programa puede ser evaluado comparando su tiempo de ejecucion.
+
+puntos clave:
+1-Si un programa se utiizara pocas veces, elegir el algoritmo que es mas facil de implementar.
+
+2-Si un programa ejecuta solo pequeñas entradas, la tasa de crecimiento del tiempo de ejecucion puede ser menos importante que la constanteen la formula de tiempo de ejecucion.
+
+3-Un complicado pero eficiente algoritmo puede no ser deseable porque otra persona que lo adquiera talvez tenga que hacer mantenimiento y hay que considerar la posibilidad de que el programa se vuelva inutil porque no puede ser entendido por nadie.
+
+4-En algoritmos numericos, la exactitud y estabilidad son tan importante como la eficiencia.
+
+
+
+
+
