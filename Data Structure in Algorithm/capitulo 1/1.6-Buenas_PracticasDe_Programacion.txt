@@ -1,0 +1,19 @@
+Existen un gran numero de ideas que debemos de tener en cuenta a la hora de diseñar un algoritmo e implementarlo en un programa. Estas ideas pueden parecer triviales, porque a la larga pueden ser apreciadas solamente atravez de su exitoso uso en problemas reales.
+
+Acontinuacion se destacan algunas ideas que deben considerarse a la hora de programar:
+
+1-Planificar el diseño de un programa:
+Anteriormente ya se habian mencionado los pasos que consistian en, diseñar el modelo de un algoritmo informalmente, luego en un pseudo programa y luego finalmente implementarlo en codigo de un lenguage de programacion.
+
+2-Encapsulado:
+Usa procedimientos y TDAs para colocar el codigo segun su importancia y tipo de dato en un lugar del programa listado.
+
+3-Usar o modificar un programa existente:
+Con el objetivo de no empezar desde cero y no pretender inventar algo que ya existe.
+
+4-Ser un herrero:
+Se trata de escribir programas literalmente flexibles y adaptables a otras situaciones del mismo tipo, aunque codificarlo lleve mas tiempo y esfuerzo.
+
+5-programar en linea de comandos:
+facilita el uso de herramientas que solo pertenecen al nivel de programacion por comandos una comunidad de ejemplo es laravel que por medio de comandos artisan se crean plantillas que facilitan el desarrollo segun las necesidades que se requieran.
+
