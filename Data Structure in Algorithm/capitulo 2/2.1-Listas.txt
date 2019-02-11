@@ -1,0 +1,5 @@
+Las listas son particularmente estructuras flexibles porque pueden crecer y encogerse en demanda, y los elementos pueden se accesados, insertados o eliminados en cualquier posicion dentro de la lista. Tambien pueden ser concatenadas entre ellas o separarse en sublistas.Las listas son muy comunes en programas de recuperacion de informacion, traductores y simulaciones.
+
+matematicamente, una lista es una secuencia de 0 o mas elementos de un tipo dado.
+
+En las listas sus elementos pueden ser linealmente ordenados segun su posicion en lista.

@@ -1,0 +1,4 @@
+Tipos de datos abstractos basico:
+En este capitulo se estudian algunos de los mas fundamentales tipos de datos abstractos.
+como listas, que son secuencias de elementos,y 2 casos especiales: pilas, donde se elimina e insertan elementos solamente al final, y colas, donde elementos son insertados al final y eliminados al principio. Luego investigaremos brevemente mapeo o tiendas asociativas, y TDAs que se comportan como funciones. Por cada TDA se consideran severas implementaciones y comparaciones de sus meritos relativos.
+
