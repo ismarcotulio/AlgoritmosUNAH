@@ -10,29 +10,38 @@ el repositorio que utilizaremos es el siguiente:
 -git clone https://github.com/martulioruiz/algoritmosUNAH.git
 ------------------------------------------------------------------
 
+----------------------------------------------------------------
+2-cd "Repositorio":
+Para poder empezar a modificar el repositorio se debe estar en la carpeta raiz, para eso basta con utilizar el comando cd, de la terminal.
+
+por ejemplo:
+
+-cd AlgoritmosUNAH 
+------------------------------------------------------------------
+
 ------------------------------------------------------------
-2-Pull:
+3-Pull:
 antes de escribir codigo deberan de hacer un pull; actualiza todo el repositorio que se clono.
 
 -git pull
 ---------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
-3-add:
+4-add:
 El primer paso para subir codigo al repositorio es empaquetarlo.
 
 .git add .(antes del punto va un espacio)
 ---------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------
-4-commit:
+5-commit:
 Despues de empaquetar el codigo, se agrega un comentario (paso obligatorio).
 
 -git commit -m "comentario"
 ------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------
-5-push:
+6-push:
 Despues del comentario, se sube al repositorio, el nuevo codigo con cambios.
 
 -git push
