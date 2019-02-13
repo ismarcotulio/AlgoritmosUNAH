@@ -8,6 +8,9 @@ Abren la terminal y escriben el comando...
 el repositorio que utilizaremos es el siguiente:
 
 -git clone https://github.com/martulioruiz/algoritmosUNAH.git
+
+(El repositorio es una carpeta, la carpeta se clonara segun la ubicacion en la que este
+la terminal, clonar en un lugar de facil acceso como el escritorio)
 ------------------------------------------------------------------
 
 ----------------------------------------------------------------
