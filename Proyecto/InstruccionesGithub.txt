@@ -11,7 +11,7 @@ el repositorio que utilizaremos es el siguiente:
 
 (El repositorio es una carpeta, la carpeta se clonara segun la ubicacion en la que este
 la terminal, clonar en un lugar de facil acceso como el escritorio)
-------------------------------------------------------------------
+
 
 ----------------------------------------------------------------
 2-cd "Repositorio":
@@ -20,33 +20,83 @@ Para poder empezar a modificar el repositorio se debe estar en la carpeta raiz, 
 por ejemplo:
 
 -cd AlgoritmosUNAH 
-------------------------------------------------------------------
+
 
 ------------------------------------------------------------
 3-Pull:
 antes de escribir codigo deberan de hacer un pull; actualiza todo el repositorio que se clono.
 
 -git pull
----------------------------------------------------------------------------
 
-------------------------------------------------------------------------
-4-add:
-El primer paso para subir codigo al repositorio es empaquetarlo.
+
+---------------------------------------------------------------------------
+4-branch:
+El repositoria principal se llama master, los repositorios pueden tener ramas para trabajar por equipo, cada integrante del equipo debe tener su propia rama de trabajo.
+Para crear una rama:
+
+-git branch "Nombre de la rama"
+
+por ejemplo:
+
+-git branch "Cristian"
+
+
+---------------------------------------------------------------------------------
+5-checkout:
+
+para cambiar de rama se utiliza el comando checkout
+
+-git checkout "Nombre de la rama"
+
+por ejemplo:
+
+-git checkout "Cristian"
+
+
+-------------------------------------------------------------------------------
+6-eliminar rama:
+
+para eliminar una rama:
+
+-git branch -d "nombre de la rama"
+
+
+---------------------------------------------------------------------------------
+7-add:
+El primer paso para subir codigo a la rama es empaquetarlo.
 
 .git add .(antes del punto va un espacio)
----------------------------------------------------------------------------
+
+
 
 ----------------------------------------------------------------------------
-5-commit:
+8-commit:
 Despues de empaquetar el codigo, se agrega un comentario (paso obligatorio).
 
--git commit -m "comentario"
-------------------------------------------------------------------------------
+-git commit -m "Cualquier comentario"
+
 
 -----------------------------------------------------------------------------
-6-push:
-Despues del comentario, se sube al repositorio, el nuevo codigo con cambios.
+9-push:
+Despues del comentario, se sube a la rama el nuevo codigo con cambios.
 
 -git push
--------------------------------------------------------------------------------
 
+
+-------------------------------------------------------------------------------
+10-merge:
+Se utiliza para unir la rama master (rama principal) con la rama del colaborador (por ejemplo la rama Gabi) y se combinan los cambios.
+
+primero se debe hacer un cambio a la rama master:
+
+-git checkout master
+
+Despues se mezclan las ramas:
+
+-git merge "Cualquie rama"
+
+por ejemplo:
+
+-git merge Cristian.
+
+-----------------------------------------------------------------------------------
