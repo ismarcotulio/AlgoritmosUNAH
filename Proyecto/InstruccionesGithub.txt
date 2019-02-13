@@ -1,0 +1,40 @@
+Lo primero que deben es instalar git en sus computadoras, una vez instalado sigan los siguientes pasos:
+
+------------------------------------------------------
+1-Clonar Repositorio:
+Abren la terminal y escriben el comando...
+-git clone "(direccion del repositorio)".
+
+el repositorio que utilizaremos es el siguiente:
+
+-git clone https://github.com/martulioruiz/algoritmosUNAH.git
+------------------------------------------------------------------
+
+------------------------------------------------------------
+2-Pull:
+antes de escribir codigo deberan de hacer un pull; actualiza todo el repositorio que se clono.
+
+-git pull
+---------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+3-add:
+El primer paso para subir codigo al repositorio es empaquetarlo.
+
+.git add .(antes del punto va un espacio)
+---------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+4-commit:
+Despues de empaquetar el codigo, se agrega un comentario (paso obligatorio).
+
+-git commit -m "comentario"
+------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+5-push:
+Despues del comentario, se sube al repositorio, el nuevo codigo con cambios.
+
+-git push
+-------------------------------------------------------------------------------
+
