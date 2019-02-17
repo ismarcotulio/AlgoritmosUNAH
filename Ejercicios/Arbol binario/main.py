@@ -1,8 +1,6 @@
-From core BST import *
+From core Arbol import *
 
-bst = BST()
+arbol = Arbol()
+arbol.agregar('raiz')
 
-bst.add(5)
-bst.add(12)
-
-print "El numero 15 se encuentra en el arbol 15"%(5,bst search(5))
+arbol.busqueda('raiz',)
