@@ -1,0 +1,20 @@
+---------------------------------------------
+1-Se utilizo la estructura de un arbol binario como base.
+
+----------------------------------------------------------------------------------
+
+2-Los apuntadores Izquierda y Derecha, Se cambiaron por una lista de apuntadores.
+
+----------------------------------------------------------------------------------
+
+3-La consola no tiene fin.
+
+----------------------------------------------------------------------
+
+4-Se agrego un control de comandos 
+
+--------------------------------------------------------------------
+
+5-La estructura es infinita (nodos) solo en su primer nivel (La raiz/ padre), para que el nivel 2 sea infinito (hijos) es necesario desarrollar la clase del comando "cd" para cambiar de un nivel a otro.
+
+--------------------------------------------------------------------------------------
