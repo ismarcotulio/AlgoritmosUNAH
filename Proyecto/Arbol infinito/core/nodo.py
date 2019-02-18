@@ -13,7 +13,9 @@ class nodo:
 		for i in range(len(self.apuntadores)):
 			if self.apuntadores[i].identificador == valor:
 				return i
-			
+			else:
+				return None
+
 
 	def getId(self):
 		
