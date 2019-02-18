@@ -32,7 +32,8 @@ class Arbol:
 		else:
 			nodoActual.setApuntador(nodo(identificador))
 
-
+	def nodoActual(self):
+		print self.raiz.identificador
 		"""if nodoActual.valor >= valor:
 			if nodoActual.hijoIzquierdo:
 				self.agregarNodo(nodoActual.hijoDerecho, valor)
@@ -57,28 +58,54 @@ class Arbol:
 
 		else:
 			index = nodoActual.getApuntador(identificador)
-			print index 
 			print nodoActual.identificador
-			for i in range(len(nodoActual.apuntadores)):
-				print nodoActual.apuntadores[i].identificador
+			print index
+			"""for i in range(len(nodoActual.apuntadores)):
+				print nodoActual.apuntadores[i].identificador"""
 		 	return self.busquedaInner(nodoActual.apuntadores[index],identificador) 	
 
 	
 
 	def comandoControl(self, comando):
+
+		lista = comando.split()
+		Parametros = []
+
+		for i in range(len(lista)):
+			if i == 0:
+				palabraReservada = lista[i]
+			else:
+				Parametros.append(lista[i])
+				
+		nombre = "comando_"+str(palabraReservada)
+
+		ejecucion = getattr(self, nombre)
+
+		ejecucion(Parametros)
 		
-		nombre = "comando_"+str(comando)
 
-		ejecucion = getattr(self, nombre, lambda: "comando invalido")
+	def comando_cd(self,parametro):
+		print "Has seleccionado el comando cd "+parametro[0]
+		if parametro[0] == '..':
 
-		return ejecucion()
-		
+			"""codigo"""
+		else:
+			tipoParametro = parametro[0].split("/")
+			if len(tipoParametro)>1:
+				print len(tipoParametro)
+			else:
+				index = self.raiz.getApuntador(parametro[0])
+				"""print index"""
+				if index!=None:
+					"""print self.raiz.apuntadores[index].identificador"""
+					self.raiz = self.raiz.apuntadores[index]
+				else:
+					print "directorio no existe"
 
-	def comando_cd(self):
-		print "Has seleccionado el comando cd"
 
-	def comando_mkdir(self):
-		print "Has seleccionado el comando mkdir"
+	def comando_mkdir(self, parametro):
+		print "Has seleccionado el comando mkdir "+parametro[0]
+		self.agregarNodo(self.raiz, parametro[0])
 
 	def comando_pwd(self):
 		print "Has seleccionado el comando pwd"
