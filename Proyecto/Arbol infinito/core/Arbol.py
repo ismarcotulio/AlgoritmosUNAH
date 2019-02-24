@@ -23,16 +23,19 @@ class Arbol:
 			self.agregarNodo(self.raiz, identificador)
 
 	def setRaiz(self, identificador):
-		self.raiz = nodo(identificador)
+		self.raiz = nodo(identificador,None)
 
 
 	def agregarNodo(self, nodoActual, identificador):
 		if nodoActual.getApuntador(identificador):
 			print "error: nodo ya existe"
+		elif nodoActual == None:
+			nodoActual.setApuntador(nodo(identificador,None))
 		else:
-			nodoActual.setApuntador(nodo(identificador))
+			nodoActual.setApuntador(nodo(identificador,nodoActual))
 
 	def nodoActual(self):
+		print(" ");
 		print self.raiz.identificador
 		"""if nodoActual.valor >= valor:
 			if nodoActual.hijoIzquierdo:
@@ -86,13 +89,18 @@ class Arbol:
 
 	def comando_cd(self,parametro):
 		print "Has seleccionado el comando cd "+parametro[0]
-		if parametro[0] == '..':
+		if parametro[0] == '...':
 
 			"""codigo"""
 		else:
 			tipoParametro = parametro[0].split("/")
 			if len(tipoParametro)>1:
 				print len(tipoParametro)
+			elif tipoParametro[0] == "..":
+				if self.raiz.padre == None:
+					print("Se encuentra en la raiz, no puede retroceder mas")
+				else:
+					self.raiz = self.raiz.padre
 			else:
 				index = self.raiz.getApuntador(parametro[0])
 				"""print index"""
@@ -101,6 +109,7 @@ class Arbol:
 					self.raiz = self.raiz.apuntadores[index]
 				else:
 					print "directorio no existe"
+
 
 
 	def comando_mkdir(self, parametro):
