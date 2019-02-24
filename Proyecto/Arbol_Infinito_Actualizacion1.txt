@@ -18,3 +18,5 @@
 5-La estructura es infinita (nodos) solo en su primer nivel (La raiz/ padre), para que el nivel 2 sea infinito (hijos) es necesario desarrollar la clase del comando "cd" para cambiar de un nivel a otro.
 
 --------------------------------------------------------------------------------------
+
+6-comando cd ya es capaz de utilizar el parametro cd .. para retroceder de directorio
