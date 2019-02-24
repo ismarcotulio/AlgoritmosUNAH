@@ -1,7 +1,8 @@
 class nodo:
-	def __init__(self,identificador):
+	def __init__(self,identificador,padre):
 		self.apuntadores = []
 		self.identificador = identificador
+		self.padre = padre
 
 
 	def getApuntador(self, valor):
