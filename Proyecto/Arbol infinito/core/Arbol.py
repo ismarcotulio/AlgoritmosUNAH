@@ -1,20 +1,19 @@
 
 from nodo import *
-from comandos.cd import *
-from comandos.mkdir import *
-from comandos.pwd import *
-from comandos.ls import *
-from comandos.touch import *
-from comandos.mv import *
-from comandos.rm import *
-from comandos.exit import *
-from comandos.find import *
+from base import *
+import json
+
 
 
 class Arbol:
-	def __init__(self):
+	raiz = None
+	nivel = 0
+	base = base('base.json') 
+	hijos = {}		
+	dic = {}
 
-		self.raiz = None
+	def __init__(self):
+		pass
 
 	def agregar(self, identificador):
 		if self.raiz is None:
@@ -24,19 +23,21 @@ class Arbol:
 
 	def setRaiz(self, identificador):
 		self.raiz = nodo(identificador,None)
+		#self.raizPadre = nodo(identificador,None)
+		"""self.base.insertarObjeto(self.raiz,self.raiz.padre, self.raiz.identificador)"""
+		
 
 
 	def agregarNodo(self, nodoActual, identificador):
-		if nodoActual.getApuntador(identificador):
-			print "error: nodo ya existe"
-		elif nodoActual == None:
-			nodoActual.setApuntador(nodo(identificador,None))
+		if nodoActual.getApuntador(identificador) != None:
+			print("error: nodo ya existe")
 		else:
-			nodoActual.setApuntador(nodo(identificador,nodoActual))
+			nodoActual.setApuntador(nodo(str(identificador),nodoActual))
+			#self.base.insertarObjeto(nodo(identificador,nodoActual),nodoActual.identificador,identificador)
 
 	def nodoActual(self):
 		print(" ");
-		print self.raiz.identificador
+		print(self.raiz.identificador)
 		"""if nodoActual.valor >= valor:
 			if nodoActual.hijoIzquierdo:
 				self.agregarNodo(nodoActual.hijoDerecho, valor)
@@ -49,7 +50,7 @@ class Arbol:
 				nodoActual.hijoIzquierdo = Nodo(valor)"""
 
 
-	def busqueda(self,identificador):
+	"""def busqueda(self,identificador):
 		self.busquedaInner(self.raiz,identificador)
 
 	def busquedaInner(self, nodoActual, identificador):
@@ -61,12 +62,11 @@ class Arbol:
 
 		else:
 			index = nodoActual.getApuntador(identificador)
-			print nodoActual.identificador
-			print index
-			"""for i in range(len(nodoActual.apuntadores)):
-				print nodoActual.apuntadores[i].identificador"""
-		 	return self.busquedaInner(nodoActual.apuntadores[index],identificador) 	
-
+			print(nodoActual.identificador)
+			print(index)
+			for i in range(len(nodoActual.apuntadores)):
+				print nodoActual.apuntadores[i].identificador
+		 	return self.busquedaInner(nodoActual.apuntadores[index],identificador)""" 	
 	
 
 	def comandoControl(self, comando):
@@ -88,39 +88,119 @@ class Arbol:
 		
 
 	def comando_cd(self,parametro):
-		print "Has seleccionado el comando cd "+parametro[0]
+		print("Has seleccionado el comando cd "+parametro[0])
 		if parametro[0] == '...':
 
 			"""codigo"""
 		else:
 			tipoParametro = parametro[0].split("/")
 			if len(tipoParametro)>1:
-				print len(tipoParametro)
+				print(len(tipoParametro))
 			elif tipoParametro[0] == "..":
 				if self.raiz.padre == None:
 					print("Se encuentra en la raiz, no puede retroceder mas")
 				else:
 					self.raiz = self.raiz.padre
+					self.nivel = self.nivel - 1
 			else:
-				index = self.raiz.getApuntador(parametro[0])
+				
+				obj = self.raiz.getApuntador(parametro[0])
 				"""print index"""
-				if index!=None:
+				if obj != None:
 					"""print self.raiz.apuntadores[index].identificador"""
-					self.raiz = self.raiz.apuntadores[index]
+					self.raiz = obj
+					self.nivel = self.nivel + 1
 				else:
-					print "directorio no existe"
+					print("directorio no existe")
 
-
+	def toRaiz(self):
+		while self.raiz.identificador != "raiz":
+			self.raiz = self.raiz.padre
+			#self.nivel = self.nivel - 1
 
 	def comando_mkdir(self, parametro):
-		print "Has seleccionado el comando mkdir "+parametro[0]
+		print("Has seleccionado el comando mkdir "+parametro[0])
 		self.agregarNodo(self.raiz, parametro[0])
 
 	def comando_pwd(self):
-		print "Has seleccionado el comando pwd"
+		print("Has seleccionado el comando pwd")
+		print("Usted se encuentra en el nodo: ")
+		self.nodoActual()
 
 	def comando_ls(self):
-		print "Has seleccionado el comando ls"
+		print("Has seleccionado el comando ls")
 
-	def comando_exit(self):
-		print "Has seleccionado el comando exit"
+	def comando_exit(self, base):
+		print("Has seleccionado el comando exit")
+
+
+	def comando_find(self, parametro):
+		
+		if(len(parametro) == 1):
+			print("Has seleccionado el comando find "+parametro[0])
+			self.toRaiz()	
+			objeto = Arbol.buscar(self.raiz, parametro[0])
+			if(objeto != None):
+				self.raiz = objeto		
+				print(objeto)
+				print(objeto.identificador)
+			else:
+				print("directorio no encontrado")
+		else:
+			print("ha introducido muchos parametros, intentelo de nuevo")
+
+
+	@staticmethod
+	def serialize(obj):
+		"""print("---------------------------obj------------------------------------")
+		print(obj)
+		print(type(obj))
+		print(obj.identificador)"""
+		if(len(obj.apuntadores) != 0):
+			"""print("------------------------------hijos-------------------------------")
+			print(obj.apuntadores)
+			print(type(obj.apuntadores))"""
+			for item in obj.apuntadores:
+				"""print("------------------item-------------------------------------------")
+				print(item)
+				print(type(item))
+				print(item.identificador)"""
+				Arbol.dic = {
+					"dic "+item.identificador:
+						item.identificador,
+						"hijos "+item.identificador:[
+							Arbol.serialize(item)
+						]	
+					}
+		return Arbol.dic
+    				
+	@staticmethod
+	def arbolSerialize(obj):
+		obj.hijos = {
+			"dic "+obj.raiz.identificador:
+				obj.raiz.identificador,
+				"hijos "+obj.raiz.identificador:[
+					obj.serialize(obj.raiz)
+				]
+		}
+		
+		return obj.hijos
+
+
+	@staticmethod
+	def buscar(obj, identificador):
+		print(obj.identificador)
+		if obj.identificador == identificador:
+			print("encontrado")
+			return obj
+		else:
+			if len(obj.apuntadores)>0:
+				for item in obj.apuntadores:
+					
+					if(item.identificador == str(identificador)):
+						print(item)
+						return item
+						return item
+
+					else:
+						Arbol.buscar(item, identificador)
