@@ -11,6 +11,7 @@ class Arbol:
 	base = base('base.json') 
 	hijos = {}		
 	dic = {}
+	find = None
 
 	def __init__(self):
 		pass
@@ -122,7 +123,7 @@ class Arbol:
 		print("Has seleccionado el comando mkdir "+parametro[0])
 		self.agregarNodo(self.raiz, parametro[0])
 
-	def comando_pwd(self):
+	def comando_pwd(self, parametro):
 		print("Has seleccionado el comando pwd")
 		print("Usted se encuentra en el nodo: ")
 		self.nodoActual()
@@ -139,11 +140,9 @@ class Arbol:
 		if(len(parametro) == 1):
 			print("Has seleccionado el comando find "+parametro[0])
 			self.toRaiz()	
-			objeto = Arbol.buscar(self.raiz, parametro[0])
-			if(objeto != None):
-				self.raiz = objeto		
-				print(objeto)
-				print(objeto.identificador)
+			Arbol.buscar(self.raiz, parametro[0])
+			if(Arbol.find != None):
+				self.raiz = Arbol.find		
 			else:
 				print("directorio no encontrado")
 		else:
@@ -183,24 +182,30 @@ class Arbol:
 					obj.serialize(obj.raiz)
 				]
 		}
+
 		
 		return obj.hijos
 
+	"""def raizSerialize(self, obj):
+		raiz = self.raiz
+		self.hijos.setdefault("raiz", raiz)
+		print(self.hijos)
+		print(" ")
+		
+		return self.hijos
+"""
 
 	@staticmethod
 	def buscar(obj, identificador):
-		print(obj.identificador)
 		if obj.identificador == identificador:
 			print("encontrado")
 			return obj
 		else:
-			if len(obj.apuntadores)>0:
+			if len(obj.apuntadores) > 0:
 				for item in obj.apuntadores:
 					
 					if(item.identificador == str(identificador)):
-						print(item)
-						return item
-						return item
-
+						print("encontrado")
+						Arbol.find = item
 					else:
 						Arbol.buscar(item, identificador)
