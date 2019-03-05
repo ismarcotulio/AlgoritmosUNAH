@@ -37,4 +37,11 @@ class base:
 
 	"""def eliminarObjeto(self):"""
 
+	def insertarArbol(self, obj):
+		print(" ")
+		#print(self.datos)
+		#print(type(self.datos))
+		for item in obj:
+			print(item)
+			print(" ")
 
