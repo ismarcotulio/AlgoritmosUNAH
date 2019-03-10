@@ -2,10 +2,12 @@ from core.Arbol import *
 
 estado = 0
 arbol = Arbol()
+
 #arbol.base.cargar()
 #arbol.base.insertarArbol(arbol.base.datos)
 print(" ")
 arbol.agregar('raiz')
+print(arbol.dic)
 
 
 

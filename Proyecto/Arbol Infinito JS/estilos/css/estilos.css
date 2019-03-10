@@ -1,0 +1,34 @@
+body{
+	background-color: gray;
+}
+
+.contenedor{
+	position:absolute;
+	width: 100%;
+	height:100%;
+}
+
+.fila{
+	position:relative;
+	width:95%;
+	height:100%;
+	margin:2.5%;
+	background-color:pink;
+}
+
+.columna-all{
+	position:relative;
+	width:95%;
+	height:90%;
+	margin:2.5%;
+	background-color:red;
+}
+
+.columna-middle{
+	position:relative;
+	float:left;
+	width:45%;
+	height:90%;
+	background-color:green;
+	margin:2.5%;
+}
