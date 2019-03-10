@@ -17,7 +17,7 @@ class base:
 
 	def insertar(self, instancia):
 		with open(self.nombre, 'w') as escritorArchivo:
-			json.dump(instancia,escritorArchivo, indent=4, separators=(',', ': '), default=instancia.arbolSerialize)
+			json.dump(instancia,escritorArchivo, indent=4,  default=instancia.arbolSerialize)
 
 	def insertarObjeto(self, objeto, padre, identificador):
 		existe = False
@@ -41,7 +41,7 @@ class base:
 		print(" ")
 		#print(self.datos)
 		#print(type(self.datos))
-		for item in obj:
+		
+		for item in obj["hijos "]:
 			print(item)
-			print(" ")
 

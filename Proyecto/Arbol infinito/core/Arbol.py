@@ -155,45 +155,46 @@ class Arbol:
 		print(obj)
 		print(type(obj))
 		print(obj.identificador)"""
-		if(len(obj.apuntadores) != 0):
-			"""print("------------------------------hijos-------------------------------")
-			print(obj.apuntadores)
-			print(type(obj.apuntadores))"""
-			for item in obj.apuntadores:
-				"""print("------------------item-------------------------------------------")
-				print(item)
-				print(type(item))
-				print(item.identificador)"""
-				Arbol.dic = {
-					"dic "+item.identificador:
-						item.identificador,
-						"hijos "+item.identificador:[
-							Arbol.serialize(item)
-						]	
-					}
-		return Arbol.dic
+		"""print("------------------------------hijos-------------------------------")
+		print(obj.apuntadores)
+		print(type(obj.apuntadores))"""
+		for item in obj.apuntadores:
+			"""print("------------------item-------------------------------------------")
+			print(item)
+			print(type(item))
+			"""
+			print(item.identificador)
+			print(Arbol.dic)
+			Arbol.dic[item.identificador] = item.identificador
+			Arbol.dic[item.identificador].setitem()
+			"""Arbol.dic = {
+				"identificador":
+					item.identificador,
+					"hijos":[
+						Arbol.serialize(item)
+					],		
+				}
+		return Arbol.dic"""	
+
     				
 	@staticmethod
 	def arbolSerialize(obj):
+		obj.serialize(obj.raiz)
 		obj.hijos = {
-			"dic "+obj.raiz.identificador:
+			"identificador":
 				obj.raiz.identificador,
-				"hijos "+obj.raiz.identificador:[
-					obj.serialize(obj.raiz)
+				"hijos ":[
+					Arbol.dic
 				]
 		}
 
 		
 		return obj.hijos
 
-	"""def raizSerialize(self, obj):
-		raiz = self.raiz
-		self.hijos.setdefault("raiz", raiz)
-		print(self.hijos)
-		print(" ")
-		
-		return self.hijos
-"""
+	def raizSerialize(self, obj):
+		tf = frozenset(self.raiz.__dict__)
+		return {tf}
+
 
 	@staticmethod
 	def buscar(obj, identificador):

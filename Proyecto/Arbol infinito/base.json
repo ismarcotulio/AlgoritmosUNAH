@@ -1,51 +1,7 @@
 {
-    "hijos raiz": [
+    "identificador": "raiz", 
+    "hijos ": [
         {
-            "dic c": "c",
-            "hijos c": [
-                {
-                    "dic c2": "c2",
-                    "hijos c2": [
-                        {
-                            "dic c1": "c1",
-                            "hijos c1": [
-                                {
-                                    "hijos b": [
-                                        {
-                                            "hijos b2": [
-                                                {
-                                                    "dic b1": "b1",
-                                                    "hijos b1": [
-                                                        {
-                                                            "dic a": "a",
-                                                            "hijos a": [
-                                                                {
-                                                                    "hijos a2": [
-                                                                        {
-                                                                            "dic a1": "a1",
-                                                                            "hijos a1": [
-                                                                                {}
-                                                                            ]
-                                                                        }
-                                                                    ],
-                                                                    "dic a2": "a2"
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ],
-                                            "dic b2": "b2"
-                                        }
-                                    ],
-                                    "dic b": "b"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "dic raiz": "raiz"
-}
+            "a": "a", 
+            "b": "b", 
+            "bhijos": 
