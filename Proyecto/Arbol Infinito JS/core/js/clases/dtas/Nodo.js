@@ -1,7 +1,7 @@
 export default class Nodo{
 
 	constructor(identificador,padre){
-		alert("Soy un nodo");
+		console.log("Soy un nodo");
 		this.identificador = identificador;
 		this.padre = padre;
 		this.apuntadores = [];
