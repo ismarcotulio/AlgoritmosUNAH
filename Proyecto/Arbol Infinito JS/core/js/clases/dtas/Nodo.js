@@ -8,11 +8,16 @@ export default class Nodo{
 	}
 
 	getHijo(identificador){
+		var respuesta = null;
 		this.apuntadores.forEach(function(item){
 			if(item.identificador == identificador){
-				return item;
+				console.log("se encontro");
+				console.log(item);
+				respuesta = item;
 			}
 		});
+		return respuesta;
+
 	}
 
 	setHijo(nodo){
